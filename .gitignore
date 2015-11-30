@@ -32,3 +32,4 @@ build/Release
 node_modules
 
 tools
+*.txt
