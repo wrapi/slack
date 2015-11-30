@@ -1,0 +1,41 @@
+{
+  "name": "slack-wrapi",
+  "version": "0.0.1",
+  "description": "Wrapper for Slack Web API",
+  "homepage": "https://github.com/wrapi",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wrapi/slack.git"
+  },
+  "keywords": [
+    "slack",
+    "wrapi",
+    "REST",
+    "API",
+    "api wrapper",
+    "slack-api",
+    "slack-web-api",
+    "slack wrapper"
+  ],
+  "author": "wrapi",
+  "contributors": [
+    "N. Palani Kumanan"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
+  "bugs": {
+    "url": "https://github.com/wrapi/slack/issues"
+  },
+  "dependencies": {
+    "wrapi": "^0.1.4"
+  },
+  "engines": {
+    "node": ">= 0.10.0"
+  }
+}

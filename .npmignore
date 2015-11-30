@@ -1,0 +1,15 @@
+.git*
+.npmignore
+.gitignore
+.eslintrc
+docs/
+examples/
+node_modules/
+test/
+tools/
+bin/
+.DS_Store
+Makefile
+.travis.yml
+*.log
+*.text
