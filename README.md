@@ -19,7 +19,7 @@ API calls follow this syntax:
 
 `client.apigroup.action(queryString, callback);`
 
-* `queryString` - (*as required*) API endpoint parameters as key-value pairs.
+* `queryString` - (*as required*) API method parameters as key-value pairs.
 
 ### Examples
 

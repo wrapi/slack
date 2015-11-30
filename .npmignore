@@ -12,4 +12,4 @@ bin/
 Makefile
 .travis.yml
 *.log
-*.text
+*.txt
