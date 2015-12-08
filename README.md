@@ -10,7 +10,7 @@ var slackWrapi = require('slack-wrapi');
 
 var client = new slackWrapi(SLACK_API_TOKEN);
 
-// Now you are ready to make API calls to twitter.
+// Now you are ready to make API calls to Slack.
 ```
 
 Provide parameters and a callback. 
