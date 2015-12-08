@@ -1,5 +1,6 @@
 'use strict';
 
+var util = require('util');
 var wrapi = require('wrapi');
 
 var endpoints = require('./api/slack.json');
@@ -15,13 +16,11 @@ function slackWrapi(token) {
     }
   };
 
-  wrapi.call(this,
+  slackWrapi.super_.call(this,
             'https://slack.com/api/',
             endpoints,
             opts);  
 };
 
-slackWrapi.prototype = Object.create(wrapi.prototype);
-slackWrapi.prototype.constructor = slackWrapi;
-
+util.inherits(slackWrapi, wrapi);
 module.exports = slackWrapi;
