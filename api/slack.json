@@ -94,6 +94,31 @@
 		"path": "chat.update"
 	},
 
+	"dnd.endDnd": {
+		"method": "GET",
+		"path": "dnd.endDnd"
+	},
+
+	"dnd.endSnooze": {
+		"method": "GET",
+		"path": "dnd.endSnooze"
+	},
+
+	"dnd.info": {
+		"method": "GET",
+		"path": "dnd.info"
+	},
+
+	"dnd.setSnooze": {
+		"method": "GET",
+		"path": "dnd.setSnooze"
+	},
+
+	"dnd.teamInfo": {
+		"method": "GET",
+		"path": "dnd.teamInfo"
+	},
+
 	"emoji.list": {
 		"method": "GET",
 		"path": "emoji.list"
