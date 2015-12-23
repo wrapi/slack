@@ -13,3 +13,4 @@ Makefile
 .travis.yml
 *.log
 *.txt
+History.md

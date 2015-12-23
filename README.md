@@ -2,7 +2,18 @@
 
 Client interface for accessing [Slack Web API](https://api.slack.com/web).
 
+[![NPM version](https://img.shields.io/npm/v/slack-wrapi.svg?style=flat)](https://www.npmjs.org/package/slack-wrapi)
+
+## Installation
+
+Install via [npm](https://www.npmjs.org/package/slack-wrapi)
+
+```bash
+npm install slack-wrapi --save
+```
+
 ## Usage
+
 Create a client object to connect to Slack Web API [methods](https://api.slack.com/methods).
 
 ```JS
@@ -97,6 +108,18 @@ client.chat.postMessage({
 )
 ```
 
+#### Check user's current `Do Not Disturb` settings.
+```JS
+client.dnd.info({
+    "user": "U1234"
+  },
+  function(err, data) {
+    if (!err) {
+      console.log(data);
+    } 
+  }
+)
+```
 ## API Functions
 
 ### api
@@ -125,6 +148,14 @@ client.chat.postMessage({
 * [chat.delete](https://api.slack.com/methods/chat.delete)
 * [chat.postMessage](https://api.slack.com/methods/chat.postMessage)
 * [chat.update](https://api.slack.com/methods/chat.update)
+
+### dnd
+* [dnd.endDnd](https://api.slack.com/methods/dnd.endDnd)
+* [dnd.endSnooze](https://api.slack.com/methods/dnd.endSnooze)
+* [dnd.info](https://api.slack.com/methods/dnd.info)
+* [dnd.setSnooze](https://api.slack.com/methods/dnd.setSnooze)
+* [dnd.teamInfo](https://api.slack.com/methods/dnd.teamInfo)
+
 
 ### emoji
 * [emoji.list](https://api.slack.com/methods/emoji.list)
@@ -220,5 +251,3 @@ client.chat.postMessage({
 ## License
 
   [MIT](LICENSE)
-
-
