@@ -156,9 +156,13 @@ client.dnd.info({
 * [dnd.setSnooze](https://api.slack.com/methods/dnd.setSnooze)
 * [dnd.teamInfo](https://api.slack.com/methods/dnd.teamInfo)
 
-
 ### emoji
 * [emoji.list](https://api.slack.com/methods/emoji.list)
+
+### files.comments
+* [files.comments.add](https://api.slack.com/methods/files.comments.add)
+* [files.comments.delete](https://api.slack.com/methods/files.comments.delete)
+* [files.comments.edit](https://api.slack.com/methods/files.comments.edit)
 
 ### files
 * [files.delete](https://api.slack.com/methods/files.delete)
@@ -212,7 +216,7 @@ client.dnd.info({
 * [reactions.list](https://api.slack.com/methods/reactions.list)
 * [reactions.remove](https://api.slack.com/methods/reactions.remove)
 
-#### rtm
+### rtm
 * [rtm.start](https://api.slack.com/methods/rtm.start)
 
 ### search
@@ -225,12 +229,12 @@ client.dnd.info({
 * [stars.list](https://api.slack.com/methods/stars.list)
 * [stars.remove](https://api.slack.com/methods/stars.remove)
 
-#### team
+### team
 * [team.accessLogs](https://api.slack.com/methods/team.accessLogs)
 * [team.info](https://api.slack.com/methods/team.info)
 * [team.integrationLogs](https://api.slack.com/methods/team.integrationLogs)
 
-#### usergroups
+### usergroups
 * [usergroups.create](https://api.slack.com/methods/usergroups.create)
 * [usergroups.disable](https://api.slack.com/methods/usergroups.disable)
 * [usergroups.enable](https://api.slack.com/methods/usergroups.enable)
