@@ -168,6 +168,8 @@ client.dnd.info({
 * [files.delete](https://api.slack.com/methods/files.delete)
 * [files.info](https://api.slack.com/methods/files.info)
 * [files.list](https://api.slack.com/methods/files.list)
+* [files.revokePublicURL](https://api.slack.com/methods/files.revokePublicURL)
+* [files.sharedPublicURL](https://api.slack.com/methods/files.sharedPublicURL)
 * [files.upload](https://api.slack.com/methods/files.upload)
 
 ### groups
@@ -251,7 +253,6 @@ client.dnd.info({
 * [users.list](https://api.slack.com/methods/users.list)
 * [users.setActive](https://api.slack.com/methods/users.setActive)
 * [users.setPresence](https://api.slack.com/methods/users.setPresence)
-
 ## License
 
   [MIT](LICENSE)
