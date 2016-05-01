@@ -5,7 +5,9 @@
   "homepage": "https://github.com/wrapi",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test-mocha": "mocha ./test",
+    "test": "./node_modules/istanbul/lib/cli.js cover ./node_modules/.bin/_mocha",
+    "coveralls": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls"
   },
   "repository": {
     "type": "git",
@@ -33,13 +35,17 @@
     "url": "https://github.com/wrapi/slack/issues"
   },
   "dependencies": {
-    "wrapi": "^0.1.6"
+    "wrapi": "^0.1.7"
   },
   "engines": {
     "node": ">= 0.10.0"
   },
   "devDependencies": {
     "cheerio": "^0.19.0",
-    "request": "^2.67.0"
+    "request": "^2.67.0",
+    "chai": "^3.4.1",
+    "coveralls": "^2.11.4",
+    "istanbul": "^0.4.0",
+    "mocha": "^2.3.3"
   }
 }
