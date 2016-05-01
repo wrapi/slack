@@ -271,6 +271,26 @@
 		"method": "GET",
 		"path": "reactions.remove"
 	},
+	"reminders.add": {
+		"method": "GET",
+		"path": "reminders.add"
+	},
+	"reminders.complete": {
+		"method": "GET",
+		"path": "reminders.complete"
+	},
+	"reminders.delete": {
+		"method": "GET",
+		"path": "reminders.delete"
+	},
+	"reminders.info": {
+		"method": "GET",
+		"path": "reminders.info"
+	},
+	"reminders.list": {
+		"method": "GET",
+		"path": "reminders.list"
+	},
 	"rtm.start": {
 		"method": "GET",
 		"path": "rtm.start"

@@ -1,7 +1,13 @@
+0.1.4 / 2015-04-24
+==================
+
+ * [Slack changelog](https://api.slack.com/changelog/2016-04-14-reminders-api)
+ * `reminders.add`, `reminders.complete`, `reminders.delete`, `reminders.info` & `reminders.list`
+
 0.1.3 / 2015-02-27
 ==================
 
- * [Slack changelong](https://api.slack.com/docs/changelog#february_2016)
+ * [Slack changelog](https://api.slack.com/docs/changelog#february_2016)
  * `files.sharedPublicURL` & `files.revokePublicURL`
 
 0.1.2 / 2015-12-22

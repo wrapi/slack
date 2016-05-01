@@ -3,6 +3,9 @@
 Client interface for accessing [Slack Web API](https://api.slack.com/web).
 
 [![NPM version](https://img.shields.io/npm/v/slack-wrapi.svg?style=flat)](https://www.npmjs.org/package/slack-wrapi)
+[![Build Status](https://travis-ci.org/wrapi/slack.svg?style=flat)](https://travis-ci.org/wrapi/slack)
+[![Coverage Status](https://coveralls.io/repos/github/wrapi/slack/badge.svg)](https://coveralls.io/github/wrapi/slack)
+
 
 ## Installation
 
@@ -218,6 +221,13 @@ client.dnd.info({
 * [reactions.list](https://api.slack.com/methods/reactions.list)
 * [reactions.remove](https://api.slack.com/methods/reactions.remove)
 
+### reminders
+* [reminders.add](https://api.slack.com/methods/reminders.add)
+* [reminders.complete](https://api.slack.com/methods/reminders.complete)
+* [reminders.delete](https://api.slack.com/methods/reminders.delete)
+* [reminders.info](https://api.slack.com/methods/reminders.info)
+* [reminders.list](https://api.slack.com/methods/reminders.list)
+
 ### rtm
 * [rtm.start](https://api.slack.com/methods/rtm.start)
 
@@ -253,6 +263,7 @@ client.dnd.info({
 * [users.list](https://api.slack.com/methods/users.list)
 * [users.setActive](https://api.slack.com/methods/users.setActive)
 * [users.setPresence](https://api.slack.com/methods/users.setPresence)
+
 ## License
 
   [MIT](LICENSE)
