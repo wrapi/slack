@@ -1,3 +1,9 @@
+0.1.5 / 2015-06-22
+==================
+
+ * [Slack changelog](https://api.slack.com/changelog#june_2016)
+ * `auth.revoke`, `bots.info`, `chat.meMessage`, `team.billableInfo`, `team.profile.get`, `users.identity`, `users.profile.get` & `users.profile.set`
+
 0.1.4 / 2015-04-24
 ==================
 
