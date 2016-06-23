@@ -129,7 +129,11 @@ client.dnd.info({
 * [api.test](https://api.slack.com/methods/api.test)
 
 ### auth
+* [auth.revoke](https://api.slack.com/methods/auth.revoke)
 * [auth.test](https://api.slack.com/methods/auth.test)
+
+### bots
+* [bots.info](https://api.slack.com/methods/bots.info)
 
 ### channels
 * [channels.archive](https://api.slack.com/methods/channels.archive)
@@ -149,6 +153,7 @@ client.dnd.info({
 
 ### chat
 * [chat.delete](https://api.slack.com/methods/chat.delete)
+* [chat.meMessage](https://api.slack.com/methods/chat.meMessage)
 * [chat.postMessage](https://api.slack.com/methods/chat.postMessage)
 * [chat.update](https://api.slack.com/methods/chat.update)
 
@@ -243,8 +248,12 @@ client.dnd.info({
 
 ### team
 * [team.accessLogs](https://api.slack.com/methods/team.accessLogs)
+* [team.billableInfo](https://api.slack.com/methods/team.billableInfo)
 * [team.info](https://api.slack.com/methods/team.info)
 * [team.integrationLogs](https://api.slack.com/methods/team.integrationLogs)
+
+### team.profile
+* [team.profile.get](https://api.slack.com/methods/team.profile.get)
 
 ### usergroups
 * [usergroups.create](https://api.slack.com/methods/usergroups.create)
@@ -259,10 +268,15 @@ client.dnd.info({
 
 ### users
 * [users.getPresence](https://api.slack.com/methods/users.getPresence)
+* [users.identity](https://api.slack.com/methods/users.identity)
 * [users.info](https://api.slack.com/methods/users.info)
 * [users.list](https://api.slack.com/methods/users.list)
 * [users.setActive](https://api.slack.com/methods/users.setActive)
 * [users.setPresence](https://api.slack.com/methods/users.setPresence)
+
+### users.profile
+* [users.profile.get](https://api.slack.com/methods/users.profile.get)
+* [users.profile.set](https://api.slack.com/methods/users.profile.set)
 
 ## License
 
