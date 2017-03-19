@@ -27,7 +27,7 @@ var client = new slackWrapi(SLACK_API_TOKEN);
 // Now you are ready to make API calls to Slack.
 ```
 
-Provide parameters and a callback. 
+Provide parameters and a callback.
 
 API calls follow this syntax:
 
@@ -42,7 +42,7 @@ API calls follow this syntax:
 client.emoji.list(function(err, data) {
   if (!err) {
     console.log(data);
-  } 
+  }
 });
 ```
 
@@ -51,7 +51,7 @@ client.emoji.list(function(err, data) {
 client.channels.list({exclude_archived:1}, function(err, data) {
   if (!err) {
     console.log(data);
-  }	
+  }
 });
 ```
 
@@ -60,7 +60,7 @@ client.channels.list({exclude_archived:1}, function(err, data) {
 client.groups.info({channel:"G1234567890"}, function(err, data) {
   if (!err) {
     console.log(data);
-  } 
+  }
 });
 ```
 
@@ -76,7 +76,7 @@ client.reactions.add({
   function(err, data) {
     if (!err) {
       console.log(data);
-    }	
+    }
   }
 );
 ```
@@ -86,7 +86,7 @@ client.reactions.add({
 client.users.info({user: "U1234567890"}, function(err, data) {
   if (!err) {
     console.log(data);
-  }	
+  }
 });
 ```
 
@@ -106,7 +106,7 @@ client.chat.postMessage({
   function(err, data) {
     if (!err) {
       console.log(data);
-    } 
+    }
   }
 )
 ```
@@ -119,7 +119,7 @@ client.dnd.info({
   function(err, data) {
     if (!err) {
       console.log(data);
-    } 
+    }
   }
 )
 ```
@@ -147,6 +147,7 @@ client.dnd.info({
 * [channels.list](https://api.slack.com/methods/channels.list)
 * [channels.mark](https://api.slack.com/methods/channels.mark)
 * [channels.rename](https://api.slack.com/methods/channels.rename)
+* [channels.replies](https://api.slack.com/methods/channels.replies)
 * [channels.setPurpose](https://api.slack.com/methods/channels.setPurpose)
 * [channels.setTopic](https://api.slack.com/methods/channels.setTopic)
 * [channels.unarchive](https://api.slack.com/methods/channels.unarchive)
@@ -155,6 +156,7 @@ client.dnd.info({
 * [chat.delete](https://api.slack.com/methods/chat.delete)
 * [chat.meMessage](https://api.slack.com/methods/chat.meMessage)
 * [chat.postMessage](https://api.slack.com/methods/chat.postMessage)
+* [chat.unfurl](https://api.slack.com/methods/chat.unfurl)
 * [chat.update](https://api.slack.com/methods/chat.update)
 
 ### dnd
@@ -194,6 +196,7 @@ client.dnd.info({
 * [groups.mark](https://api.slack.com/methods/groups.mark)
 * [groups.open](https://api.slack.com/methods/groups.open)
 * [groups.rename](https://api.slack.com/methods/groups.rename)
+* [groups.replies](https://api.slack.com/methods/groups.replies)
 * [groups.setPurpose](https://api.slack.com/methods/groups.setPurpose)
 * [groups.setTopic](https://api.slack.com/methods/groups.setTopic)
 * [groups.unarchive](https://api.slack.com/methods/groups.unarchive)
@@ -204,6 +207,7 @@ client.dnd.info({
 * [im.list](https://api.slack.com/methods/im.list)
 * [im.mark](https://api.slack.com/methods/im.mark)
 * [im.open](https://api.slack.com/methods/im.open)
+* [im.replies](https://api.slack.com/methods/im.replies)
 
 ### mpim
 * [mpim.close](https://api.slack.com/methods/mpim.close)
@@ -211,6 +215,7 @@ client.dnd.info({
 * [mpim.list](https://api.slack.com/methods/mpim.list)
 * [mpim.mark](https://api.slack.com/methods/mpim.mark)
 * [mpim.open](https://api.slack.com/methods/mpim.open)
+* [mpim.replies](https://api.slack.com/methods/mpim.replies)
 
 ### oauth
 * [oauth.access](https://api.slack.com/methods/oauth.access)
@@ -267,11 +272,13 @@ client.dnd.info({
 * [usergroups.users.update](https://api.slack.com/methods/usergroups.users.update)
 
 ### users
+* [users.deletePhoto](https://api.slack.com/methods/users.deletePhoto)
 * [users.getPresence](https://api.slack.com/methods/users.getPresence)
 * [users.identity](https://api.slack.com/methods/users.identity)
 * [users.info](https://api.slack.com/methods/users.info)
 * [users.list](https://api.slack.com/methods/users.list)
 * [users.setActive](https://api.slack.com/methods/users.setActive)
+* [users.setPhoto](https://api.slack.com/methods/users.setPhoto)
 * [users.setPresence](https://api.slack.com/methods/users.setPresence)
 
 ### users.profile
