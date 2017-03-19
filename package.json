@@ -35,7 +35,7 @@
     "url": "https://github.com/wrapi/slack/issues"
   },
   "dependencies": {
-    "wrapi": "^0.1.8"
+    "wrapi": "^0.1.11"
   },
   "engines": {
     "node": ">= 0.10.0"
