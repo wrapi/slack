@@ -1,5 +1,6 @@
 var expect = require('chai').expect;
 var slackWrapi = require('../index');
+var package = require('../package.json')
 
 describe("API Test", function() {
   before(function() {
@@ -12,12 +13,21 @@ describe("API Test", function() {
   });
 
   describe("Endpoints", function() {
-    it("test", function(done) {
+    it("simple", function(done) {
       this.client.api.test(function(err, data) {
         expect(err).to.equal(null);
         expect(data).to.deep.equal({ ok: true });
         done();
       });
-    });    
+    });
+
+    it("args", function(done) {
+      this.client.api.test({client: package.name, version:package.version}, function(err, data) {
+        expect(err).to.equal(null);
+        expect(data).to.deep.equal({ ok: true, args: { client: package.name, version: package.version } });
+        done();
+      });
+    });
+
   });
 });
