@@ -17,21 +17,23 @@ npm install slack-wrapi --save
 
 ## Usage
 
-Create a client object to connect to Slack Web API [methods](https://api.slack.com/methods).
+Create a slack client with a bearer token to connect to Slack Web API.
 
 ```JS
 var slackWrapi = require('slack-wrapi');
 
-var client = new slackWrapi(SLACK_API_TOKEN);
+var slack = new slackWrapi(SLACK_API_TOKEN);
 
 // Now you are ready to make API calls to Slack.
 ```
 
-Provide parameters and a callback.
+Function names match with Slack API endpoints (methods) as per the [documentation](https://api.slack.com/methods).
+
+Just provide parameters and a callback.
 
 API calls follow this syntax:
 
-`client.apigroup.action(queryString, callback);`
+`slack.apigroup.action(queryString, callback);`
 
 * `queryString` - (*as required*) API method parameters as key-value pairs.
 
@@ -39,7 +41,7 @@ API calls follow this syntax:
 
 #### Lists custom emoji for a team.
 ```JS
-client.emoji.list(function(err, data) {
+slack.emoji.list(function(err, data) {
   if (!err) {
     console.log(data);
   }
@@ -48,7 +50,7 @@ client.emoji.list(function(err, data) {
 
 #### Lists all channels in a Slack team.
 ```JS
-client.channels.list({exclude_archived:1}, function(err, data) {
+slack.channels.list({exclude_archived:1}, function(err, data) {
   if (!err) {
     console.log(data);
   }
@@ -57,7 +59,7 @@ client.channels.list({exclude_archived:1}, function(err, data) {
 
 #### Gets information about a private group.
 ```JS
-client.groups.info({channel:"G1234567890"}, function(err, data) {
+slack.groups.info({channel:"G1234567890"}, function(err, data) {
   if (!err) {
     console.log(data);
   }
@@ -66,7 +68,7 @@ client.groups.info({channel:"G1234567890"}, function(err, data) {
 
 #### Adds a reaction to an item.
 ```JS
-client.reactions.add({
+slack.reactions.add({
     name: "thumbsup",
     file: "F1234567890",
     file_comment: "Fc1234567890",
@@ -83,7 +85,7 @@ client.reactions.add({
 
 #### Gets information about a user.
 ```JS
-client.users.info({user: "U1234567890"}, function(err, data) {
+slack.users.info({user: "U1234567890"}, function(err, data) {
   if (!err) {
     console.log(data);
   }
@@ -92,7 +94,7 @@ client.users.info({user: "U1234567890"}, function(err, data) {
 
 #### Post chat messages to Slack.
 ```JS
-client.chat.postMessage({
+slack.chat.postMessage({
     "channel": "#general",
     "text": "Hello <@u12345678|world>!",
     "username": "Wrapi Bot",
@@ -113,7 +115,7 @@ client.chat.postMessage({
 
 #### Check user's current `Do Not Disturb` settings.
 ```JS
-client.dnd.info({
+slack.dnd.info({
     "user": "U1234"
   },
   function(err, data) {
@@ -127,6 +129,10 @@ client.dnd.info({
 
 ### api
 * [api.test](https://api.slack.com/methods/api.test)
+
+### apps.permissions
+* [apps.permissions.info](https://api.slack.com/methods/apps.permissions.info)
+* [apps.permissions.request](https://api.slack.com/methods/apps.permissions.request)
 
 ### auth
 * [auth.revoke](https://api.slack.com/methods/auth.revoke)
@@ -155,9 +161,29 @@ client.dnd.info({
 ### chat
 * [chat.delete](https://api.slack.com/methods/chat.delete)
 * [chat.meMessage](https://api.slack.com/methods/chat.meMessage)
+* [chat.postEphemeral](https://api.slack.com/methods/chat.postEphemeral)
 * [chat.postMessage](https://api.slack.com/methods/chat.postMessage)
 * [chat.unfurl](https://api.slack.com/methods/chat.unfurl)
 * [chat.update](https://api.slack.com/methods/chat.update)
+
+### conversations
+* [conversations.archive](https://api.slack.com/methods/conversations.archive)
+* [conversations.close](https://api.slack.com/methods/conversations.close)
+* [conversations.create](https://api.slack.com/methods/conversations.create)
+* [conversations.history](https://api.slack.com/methods/conversations.history)
+* [conversations.info](https://api.slack.com/methods/conversations.info)
+* [conversations.invite](https://api.slack.com/methods/conversations.invite)
+* [conversations.join](https://api.slack.com/methods/conversations.join)
+* [conversations.kick](https://api.slack.com/methods/conversations.kick)
+* [conversations.leave](https://api.slack.com/methods/conversations.leave)
+* [conversations.list](https://api.slack.com/methods/conversations.list)
+* [conversations.members](https://api.slack.com/methods/conversations.members)
+* [conversations.open](https://api.slack.com/methods/conversations.open)
+* [conversations.rename](https://api.slack.com/methods/conversations.rename)
+* [conversations.replies](https://api.slack.com/methods/conversations.replies)
+* [conversations.setPurpose](https://api.slack.com/methods/conversations.setPurpose)
+* [conversations.setTopic](https://api.slack.com/methods/conversations.setTopic)
+* [conversations.unarchive](https://api.slack.com/methods/conversations.unarchive)
 
 ### dnd
 * [dnd.endDnd](https://api.slack.com/methods/dnd.endDnd)
@@ -184,7 +210,6 @@ client.dnd.info({
 
 ### groups
 * [groups.archive](https://api.slack.com/methods/groups.archive)
-* [groups.close](https://api.slack.com/methods/groups.close)
 * [groups.create](https://api.slack.com/methods/groups.create)
 * [groups.createChild](https://api.slack.com/methods/groups.createChild)
 * [groups.history](https://api.slack.com/methods/groups.history)
@@ -219,6 +244,7 @@ client.dnd.info({
 
 ### oauth
 * [oauth.access](https://api.slack.com/methods/oauth.access)
+* [oauth.token](https://api.slack.com/methods/oauth.token)
 
 ### pins
 * [pins.add](https://api.slack.com/methods/pins.add)
@@ -239,6 +265,7 @@ client.dnd.info({
 * [reminders.list](https://api.slack.com/methods/reminders.list)
 
 ### rtm
+* [rtm.connect](https://api.slack.com/methods/rtm.connect)
 * [rtm.start](https://api.slack.com/methods/rtm.start)
 
 ### search

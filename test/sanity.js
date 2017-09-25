@@ -6,7 +6,7 @@ describe("API Test", function() {
   before(function() {
     var token = process.env.SLACK_API_TOKEN;
 
-    this.client = new slackWrapi(token);
+    this.slack = new slackWrapi(token);
   });
 
   after(function() {
@@ -14,7 +14,7 @@ describe("API Test", function() {
 
   describe("Endpoints", function() {
     it("simple", function(done) {
-      this.client.api.test(function(err, data) {
+      this.slack.api.test(function(err, data) {
         expect(err).to.equal(null);
         expect(data).to.deep.equal({ ok: true });
         done();
@@ -22,7 +22,7 @@ describe("API Test", function() {
     });
 
     it("args", function(done) {
-      this.client.api.test({client: package.name, version:package.version}, function(err, data) {
+      this.slack.api.test({client: package.name, version:package.version}, function(err, data) {
         expect(err).to.equal(null);
         expect(data).to.deep.equal({ ok: true, args: { client: package.name, version: package.version } });
         done();

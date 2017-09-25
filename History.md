@@ -1,22 +1,33 @@
-0.1.6 / 2016-03-19
+0.1.7 / 2017-09-24
+==================
+ * [Slack changelog - September, 2017](https://api.slack.com/changelog#September_2017)
+ * [Conversations API](https://api.slack.com/docs/conversations-api)
+
+ * [Slack changelog - August, 2017](https://api.slack.com/changelog#August_2017)
+ * `chat.unfurl`, `chat.postEphemeral` & [Permissions API](https://api.slack.com/docs/permissions-api)
+
+ * [Slack changelog - April, 2017](https://api.slack.com/changelog#April_2017)
+ * `channels.list`, `users.profile.get`, `users.profile.set` & `rtm.connect`
+
+0.1.6 / 2017-03-19
 ==================
 
- * [Slack changelog](https://api.slack.com/changelog#march_2017)
+ * [Slack changelog](https://api.slack.com/changelog#March_2017)
  * `channels.replies`, `chat.unfurl`, `groups.replies`, `im.replies`, `mpim.replies`, `users.deletePhoto` & `users.setPhoto`
 
-0.1.5 / 2015-06-22
+0.1.5 / 2016-06-22
 ==================
 
- * [Slack changelog](https://api.slack.com/changelog#june_2016)
+ * [Slack changelog](https://api.slack.com/changelog#June_2016)
  * `auth.revoke`, `bots.info`, `chat.meMessage`, `team.billableInfo`, `team.profile.get`, `users.identity`, `users.profile.get` & `users.profile.set`
 
-0.1.4 / 2015-04-24
+0.1.4 / 2016-04-24
 ==================
 
  * [Slack changelog](https://api.slack.com/changelog/2016-04-14-reminders-api)
  * `reminders.add`, `reminders.complete`, `reminders.delete`, `reminders.info` & `reminders.list`
 
-0.1.3 / 2015-02-27
+0.1.3 / 2016-02-27
 ==================
 
  * [Slack changelog](https://api.slack.com/docs/changelog#february_2016)
