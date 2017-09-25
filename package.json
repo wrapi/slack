@@ -1,6 +1,6 @@
 {
   "name": "slack-wrapi",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Wrapper for Slack Web API",
   "homepage": "https://github.com/wrapi",
   "main": "index.js",

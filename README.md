@@ -17,7 +17,7 @@ npm install slack-wrapi --save
 
 ## Usage
 
-Create a slack client with a bearer token to connect to Slack Web API.
+Create a slack client with API token to connect to Slack Web API.
 
 ```JS
 var slackWrapi = require('slack-wrapi');
