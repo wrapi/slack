@@ -125,7 +125,7 @@ slack.dnd.info({
   }
 )
 ```
-## API Functions
+## API Methods
 
 ### api
 * [api.test](https://api.slack.com/methods/api.test)
@@ -133,6 +133,12 @@ slack.dnd.info({
 ### apps.permissions
 * [apps.permissions.info](https://api.slack.com/methods/apps.permissions.info)
 * [apps.permissions.request](https://api.slack.com/methods/apps.permissions.request)
+
+### apps.permissions.resources
+* [apps.permissions.resources.list](https://api.slack.com/methods/apps.permissions.resources.list)
+
+### apps.permissions.scopes
+* [apps.permissions.scopes.list](https://api.slack.com/methods/apps.permissions.scopes.list)
 
 ### auth
 * [auth.revoke](https://api.slack.com/methods/auth.revoke)
@@ -160,6 +166,7 @@ slack.dnd.info({
 
 ### chat
 * [chat.delete](https://api.slack.com/methods/chat.delete)
+* [chat.getPermalink](https://api.slack.com/methods/chat.getPermalink)
 * [chat.meMessage](https://api.slack.com/methods/chat.meMessage)
 * [chat.postEphemeral](https://api.slack.com/methods/chat.postEphemeral)
 * [chat.postMessage](https://api.slack.com/methods/chat.postMessage)
@@ -184,6 +191,9 @@ slack.dnd.info({
 * [conversations.setPurpose](https://api.slack.com/methods/conversations.setPurpose)
 * [conversations.setTopic](https://api.slack.com/methods/conversations.setTopic)
 * [conversations.unarchive](https://api.slack.com/methods/conversations.unarchive)
+
+### dialog
+* [dialog.open](https://api.slack.com/methods/dialog.open)
 
 ### dnd
 * [dnd.endDnd](https://api.slack.com/methods/dnd.endDnd)
@@ -233,6 +243,9 @@ slack.dnd.info({
 * [im.mark](https://api.slack.com/methods/im.mark)
 * [im.open](https://api.slack.com/methods/im.open)
 * [im.replies](https://api.slack.com/methods/im.replies)
+
+### migration
+* [migration.exchange](https://api.slack.com/methods/migration.exchange)
 
 ### mpim
 * [mpim.close](https://api.slack.com/methods/mpim.close)
@@ -299,11 +312,13 @@ slack.dnd.info({
 * [usergroups.users.update](https://api.slack.com/methods/usergroups.users.update)
 
 ### users
+* [users.conversations](https://api.slack.com/methods/users.conversations)
 * [users.deletePhoto](https://api.slack.com/methods/users.deletePhoto)
 * [users.getPresence](https://api.slack.com/methods/users.getPresence)
 * [users.identity](https://api.slack.com/methods/users.identity)
 * [users.info](https://api.slack.com/methods/users.info)
 * [users.list](https://api.slack.com/methods/users.list)
+* [users.lookupByEmail](https://api.slack.com/methods/users.lookupByEmail)
 * [users.setActive](https://api.slack.com/methods/users.setActive)
 * [users.setPhoto](https://api.slack.com/methods/users.setPhoto)
 * [users.setPresence](https://api.slack.com/methods/users.setPresence)

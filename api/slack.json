@@ -11,6 +11,14 @@
 		"method": "GET",
 		"path": "apps.permissions.request"
 	},
+	"apps.permissions.resources.list": {
+		"method": "GET",
+		"path": "apps.permissions.resources.list"
+	},
+	"apps.permissions.scopes.list": {
+		"method": "GET",
+		"path": "apps.permissions.scopes.list"
+	},
 	"auth.revoke": {
 		"method": "GET",
 		"path": "auth.revoke"
@@ -86,6 +94,10 @@
 	"chat.delete": {
 		"method": "GET",
 		"path": "chat.delete"
+	},
+	"chat.getPermalink": {
+		"method": "GET",
+		"path": "chat.getPermalink"
 	},
 	"chat.meMessage": {
 		"method": "GET",
@@ -174,6 +186,10 @@
 	"conversations.unarchive": {
 		"method": "GET",
 		"path": "conversations.unarchive"
+	},
+	"dialog.open": {
+		"method": "GET",
+		"path": "dialog.open"
 	},
 	"dnd.endDnd": {
 		"method": "GET",
@@ -322,6 +338,10 @@
 	"im.replies": {
 		"method": "GET",
 		"path": "im.replies"
+	},
+	"migration.exchange": {
+		"method": "GET",
+		"path": "migration.exchange"
 	},
 	"mpim.close": {
 		"method": "GET",
@@ -483,6 +503,10 @@
 		"method": "GET",
 		"path": "usergroups.users.update"
 	},
+	"users.conversations": {
+		"method": "GET",
+		"path": "users.conversations"
+	},
 	"users.deletePhoto": {
 		"method": "GET",
 		"path": "users.deletePhoto"
@@ -502,6 +526,10 @@
 	"users.list": {
 		"method": "GET",
 		"path": "users.list"
+	},
+	"users.lookupByEmail": {
+		"method": "GET",
+		"path": "users.lookupByEmail"
 	},
 	"users.setActive": {
 		"method": "GET",

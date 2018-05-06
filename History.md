@@ -1,3 +1,8 @@
+0.1.8 / 2018-05-06
+==================
+ * [Slack changelog - December, 2017](https://api.slack.com/changelog#December_2017)
+ * `apps.permissions.resources.list`, `apps.permissions.scopes.list`, `chat.getPermalink`, `users.lookupByEmail`, `users.conversations`, `migration.exchange` & `dialog.open`
+
 0.1.7 / 2017-09-24
 ==================
  * [Slack changelog - September, 2017](https://api.slack.com/changelog#September_2017)
