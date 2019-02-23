@@ -1,6 +1,9 @@
-# Slack Web API Wrapper
+# Slack Web API
 
-Client interface for accessing [Slack Web API](https://api.slack.com/web).
+The **simplest** library for [Slack Web API](https://api.slack.com/web).
+
+> Call Slack Web API endpoints just like functions
+
 
 [![NPM version](https://img.shields.io/npm/v/slack-wrapi.svg?style=flat)](https://www.npmjs.org/package/slack-wrapi)
 [![Build Status](https://travis-ci.org/wrapi/slack.svg?style=flat)](https://travis-ci.org/wrapi/slack)
@@ -17,19 +20,19 @@ npm install slack-wrapi --save
 
 ## Usage
 
-Create a slack client with API token to connect to Slack Web API.
+Create a Slack client with the [API token](https://slack.dev/node-slack-sdk/getting_started#getting-a-token-to-use-the-web-api).
 
 ```JS
-var slackWrapi = require('slack-wrapi');
+const slackWrapi = require('slack-wrapi');
 
-var slack = new slackWrapi(SLACK_API_TOKEN);
+const slack = new slackWrapi(SLACK_API_TOKEN);
 
 // Now you are ready to make API calls to Slack.
 ```
 
 Function names match with Slack API endpoints (methods) as per the [documentation](https://api.slack.com/methods).
 
-Just provide parameters and a callback.
+Just provide parameters and a callback or get back a Promise.
 
 API calls follow this syntax:
 
@@ -37,9 +40,59 @@ API calls follow this syntax:
 
 * `queryString` - (*as required*) API method parameters as key-value pairs.
 
+> If no callback is provided, the function returns a [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) object.
+
+#### Post a message with callback:
+```JS
+// ES5 Syntax with callback
+slack.chat.postMessage({
+    "channel": "#general",
+    "text": "Hello World!"
+  },
+  function(err, res) {
+    if (!err) {
+      console.log('Message posted: ', res.ts);  
+    }
+  }
+)
+```
+#### Post a message. Get back a Promise:
+
+```JS
+// ES2015 Promise
+slack.chat.postMessage({
+  "channel": "#general",
+  "text": "Hello World!"
+})
+.then((res) => {
+  console.log('Message posted: ', res.ts);  
+})
+.catch(console.error);
+```
+
+#### Post a message via async/await:
+```JS
+// ES2017 async/await
+(async () => {
+  try {
+    const res = await slack.chat.postMessage({
+      "channel": "#general",
+      "text": "Hello World!"
+    });
+
+    console.log('Message posted: ', res.ts);  
+  }
+  catch(err) {
+    console.error(err);
+  }
+})();
+```
+
+Call any [Slack Web API methods](https://api.slack.com/methods) with the client object.
+
 ### Examples
 
-#### Lists custom emoji for a team.
+#### Lists custom emojis for a team.
 ```JS
 slack.emoji.list(function(err, data) {
   if (!err) {
@@ -139,6 +192,13 @@ slack.dnd.info({
 
 ### apps.permissions.scopes
 * [apps.permissions.scopes.list](https://api.slack.com/methods/apps.permissions.scopes.list)
+
+### apps.permissions.users
+* [apps.permissions.users.list](https://api.slack.com/methods/apps.permissions.users.list)
+* [apps.permissions.users.request](https://api.slack.com/methods/apps.permissions.users.request)
+
+### apps
+* [apps.uninstall](https://api.slack.com/methods/apps.uninstall)
 
 ### auth
 * [auth.revoke](https://api.slack.com/methods/auth.revoke)
