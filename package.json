@@ -1,7 +1,7 @@
 {
   "name": "slack-wrapi",
-  "version": "1.0.1",
-  "description": "Wrapper for Slack Web API",
+  "version": "1.0.2",
+  "description": "Slack Web API Client Library",
   "homepage": "https://github.com/wrapi",
   "main": "index.js",
   "scripts": {
@@ -19,11 +19,15 @@
     "REST",
     "API",
     "api wrapper",
+    "api client",
     "slack api",
     "slack client",
     "slack web api",
     "slack wrapper",
-    "slack api wrapper"
+    "slack api wrapper",
+    "slack api client",
+    "slack web api wrapper",
+    "slack web api client"
   ],
   "author": "wrapi",
   "contributors": [

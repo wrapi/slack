@@ -1,3 +1,10 @@
+0.1.9 / 2019-02-23
+==================
+ * [Slack changelog - February, 2019](https://api.slack.com/changelog#February_2019)
+ * `apps.permissions.users.list`, `apps.permissions.users.request` & ` apps.uninstall`
+
+ * Updated examples with ES2015 Promise & ES2017 async/await
+
 0.1.8 / 2018-05-06
 ==================
  * [Slack changelog - December, 2017](https://api.slack.com/changelog#December_2017)
