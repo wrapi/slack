@@ -8,11 +8,9 @@ var endpoints = require('./api/slack.json');
 function slackWrapi(token) {
 
   var opts = {
-    qs: {
-      token: token
-    },
     headers: {
-      'User-Agent': 'slack-wrapi'
+      'User-Agent': 'slack-wrapi',
+      'Authorization': 'Bearer ' + token,
     }
   };
 
