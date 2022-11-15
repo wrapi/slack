@@ -20,3 +20,4 @@ lib/
 *.txt
 History.md
 *.tgz
+.env

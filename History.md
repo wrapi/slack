@@ -1,4 +1,8 @@
-0.1.9 / 2019-02-23
+1.1.0 / 2022-11-15
+==================
+ * 🚨 _Breaking_ 🚨 - Moved API token to `Authorization` header. Ref: [Deprecating usage of token as a query string parameter in Web API requests](https://api.slack.com/changelog/2020-11-no-more-tokens-in-querystrings-for-newly-created-apps)
+
+1.0.2 / 2019-02-23
 ==================
  * [Slack changelog - February, 2019](https://api.slack.com/changelog#February_2019)
  * `apps.permissions.users.list`, `apps.permissions.users.request` & ` apps.uninstall`

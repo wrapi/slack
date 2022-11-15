@@ -1,6 +1,6 @@
 {
   "name": "slack-wrapi",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Slack Web API Client Library",
   "homepage": "https://github.com/wrapi",
   "main": "index.js",
@@ -41,7 +41,7 @@
     "url": "https://github.com/wrapi/slack/issues"
   },
   "dependencies": {
-    "wrapi": "^1.0.1"
+    "wrapi": "^1.0.2"
   },
   "engines": {
     "node": ">= 0.10.0"
