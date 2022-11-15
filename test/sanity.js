@@ -1,11 +1,10 @@
 var expect = require('chai').expect;
 var slackWrapi = require('../index');
-var package = require('../package.json')
+var packageJson = require('../package.json')
 
 describe("API Test", function() {
+  var token = process.env.SLACK_API_TOKEN;
   before(function() {
-    var token = process.env.SLACK_API_TOKEN;
-
     this.slack = new slackWrapi(token);
   });
 
@@ -16,15 +15,15 @@ describe("API Test", function() {
     it("simple", function(done) {
       this.slack.api.test(function(err, data) {
         expect(err).to.equal(null);
-        expect(data).to.deep.equal({ ok: true });
+        expect(data).to.deep.equal({ ok: true, args: {token: token} });
         done();
       });
     });
 
     it("args", function(done) {
-      this.slack.api.test({client: package.name, version:package.version}, function(err, data) {
+      this.slack.api.test({client: packageJson.name, version:packageJson.version}, function(err, data) {
         expect(err).to.equal(null);
-        expect(data).to.deep.equal({ ok: true, args: { client: package.name, version: package.version } });
+        expect(data).to.deep.equal({ ok: true, args: { token: token, client: packageJson.name, version: packageJson.version } });
         done();
       });
     });
